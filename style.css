@@ -1,0 +1,732 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Caveat";
+  background: url("bg.jpg") no-repeat;
+  background-position: top 0 right -150px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.menu-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  padding-top: 50px;
+}
+
+.menu-links ul {
+  width: 100%;
+}
+
+.menu-links ul li {
+  padding: 10px;
+  color: #494949;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.menu-links ul li:hover {
+  background: #494949;
+  color: #fff;
+}
+
+.text {
+  position: absolute;
+  top: 20%;
+  left: 100px;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #494949;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.text .title {
+  font-size: 76px;
+  font-weight: bold;
+}
+
+.media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.media ul li {
+  display: inline-block;
+  padding: 20px;
+  font-size: 20px;
+  color: #494949;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media ul li:hover {
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 20px;
+}
+
+.ellipse-container {
+  width: 608px;
+  height: 608px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  margin: 0 auto;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ellipse {
+  position: absolute;
+  top: 0;
+  border-radius: 50%;
+  border-style: solid;
+}
+
+.stack {
+  position: absolute;
+  top: -50px;
+  right: -140px;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  font-weight: bold;
+  color: #494949;
+}
+
+.stack img {
+  width: 40px;
+  transform: rotate(0deg) scaleX(-1);
+  filter: invert(28%) sepia(27%) saturate(0%) hue-rotate(149deg) brightness(92%)
+    contrast(93%);
+}
+
+.ellipse.thin {
+  width: 100%;
+  height: 100%;
+  border-width: 2px;
+  border-color: #ffffff;
+  opacity: 0.5;
+}
+
+.ellipse.thick {
+  width: 93%;
+  height: 93%;
+  border-width: 10px;
+  border-color: rgb(255, 255, 255);
+  opacity: 0.5;
+  transform: rotate(-45deg);
+  top: 12px;
+  left: 12px;
+}
+
+.ellipse.yellow {
+  width: 93%;
+  height: 93%;
+  border-width: 10px;
+  border-color: #ffae00 transparent;
+  transform: rotate(-45deg);
+  opacity: 0.5;
+  top: 12px;
+  left: 12px;
+  animation: ellipseRotate 15s ease-in-out infinite;
+}
+
+@keyframes ellipseRotate {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+  }
+}
+
+@keyframes animationCircles {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animationCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.circles {
+  position: relative;
+  width: 572.5px;
+  height: 572.5px;
+  border-radius: 50%;
+  transform: rotate(0deg);
+  transition: transform 0.7s linear;
+  animation: animationCircles 30s ease-in-out infinite;
+}
+
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5,
+.circle6,
+.circle7,
+.circle8,
+.circle9 {
+  border-style: solid;
+  width: 64px;
+  height: 64px;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: transform 0.7s linear;
+  animation: animationCircle 30s ease-in-out infinite;
+}
+
+.circle1 {
+  top: 20%;
+  left: 0.5%;
+}
+
+.circle2 {
+  top: 94.3%;
+  left: 47.5%;
+}
+
+.circle3 {
+  top: 50%;
+  left: -5.5%;
+}
+
+.circle4 {
+  top: -5.5%;
+  left: 37.5%;
+}
+
+.circle5 {
+  top: 50%;
+  left: 94%;
+}
+
+.circle6 {
+  top: 15%;
+  left: 85%;
+}
+
+.circle7 {
+  top: 75%;
+  left: 4.8%;
+}
+
+.circle8 {
+  top: 75%;
+  left: 83.9%;
+}
+
+.circle9 {
+  top: 0%;
+  left: 67.8%;
+}
+
+.circle1::before,
+.circle1::after,
+.circle2::before,
+.circle2::after,
+.circle3::before,
+.circle3::after,
+.circle4::before,
+.circle4::after,
+.circle5::before,
+.circle5::after,
+.circle6::before,
+.circle6::after,
+.circle7::before,
+.circle7::after,
+.circle8::before,
+.circle8::after,
+.circle9::before,
+.circle9::after {
+  content: "";
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle1::before,
+.circle2::before,
+.circle3::before,
+.circle4::before,
+.circle5::before,
+.circle6::before,
+.circle7::before,
+.circle8::before,
+.circle9::before {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 174, 0, 1);
+  z-index: 1;
+}
+
+.circle1::after,
+.circle2::after,
+.circle3::after,
+.circle4::after,
+.circle5::after,
+.circle6::after,
+.circle7::after,
+.circle8::after,
+.circle9::after {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.circle1 span,
+.circle2 span,
+.circle3 span,
+.circle4 span,
+.circle5 span,
+.circle6 span,
+.circle7 span,
+.circle8 span,
+.circle9 span {
+  position: absolute;
+  top: 25px;
+  width: 100px;
+  font-size: 26px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.circle1 span {
+  left: 75px;
+  top: 25%;
+}
+
+.circle2 span {
+  left: -110px;
+  top: 25%;
+}
+
+.circle3 span {
+  left: 75px;
+  top: 25%;
+}
+
+.circle4 span {
+  left: 75px;
+  top: -15%;
+}
+
+.circle5 span {
+  left: -70px;
+  top: 25%;
+}
+
+.circle6 span {
+  left: 75px;
+  top: 25%;
+}
+
+.circle7 span {
+  left: 75px;
+  top: 25%;
+}
+
+.circle8 span {
+  left: -70px;
+  top: 25%;
+}
+
+.circle9 span {
+  left: 75px;
+  top: 25%;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: #ffae00;
+  top: 0%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay h1 {
+  font-size: 100px;
+  letter-spacing: 20px;
+}
+
+.overlay span {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 1300px) {
+  .ellipse-container {
+    width: 304px;
+    height: 304px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    margin: 0 auto;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ellipse.thin {
+    border-width: 1px;
+  }
+
+  .ellipse.thick {
+    border-width: 5px;
+    top: 6px;
+    left: 6px;
+  }
+
+  .ellipse.yellow {
+    border-width: 5px;
+    top: 6px;
+    left: 6px;
+  }
+
+  .circles {
+    width: 286.25px;
+    height: 286.25px;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4,
+  .circle5,
+  .circle6,
+  .circle7,
+  .circle8,
+  .circle9 {
+    width: 32px;
+    height: 32px;
+  }
+
+  .circle1::before,
+  .circle2::before,
+  .circle3::before,
+  .circle4::before,
+  .circle5::before,
+  .circle6::before,
+  .circle7::before,
+  .circle8::before,
+  .circle9::before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .circle1::after,
+  .circle2::after,
+  .circle3::after,
+  .circle4::after,
+  .circle5::after,
+  .circle6::after,
+  .circle7::after,
+  .circle8::after,
+  .circle9::after {
+    width: 20px;
+    height: 20px;
+  }
+
+  .circle1 span,
+  .circle2 span,
+  .circle3 span,
+  .circle4 span,
+  .circle5 span,
+  .circle6 span,
+  .circle7 span,
+  .circle8 span,
+  .circle9 span {
+    top: 12.5px;
+    width: 50px;
+    font-size: 16px;
+  }
+
+  .circle1 span {
+    left: 37.5px;
+    top: 25%;
+  }
+
+  .circle2 span {
+    left: -65px;
+    top: 25%;
+  }
+
+  .circle3 span {
+    left: 37.5px;
+    top: 25%;
+  }
+
+  .circle4 span {
+    left: 37.5px;
+    top: -15%;
+  }
+
+  .circle5 span {
+    left: -40px;
+    top: 25%;
+  }
+
+  .circle6 span {
+    left: 37.5px;
+    top: 25%;
+  }
+
+  .circle7 span {
+    left: 37.5px;
+    top: 25%;
+  }
+
+  .circle8 span {
+    left: -40px;
+    top: 25%;
+  }
+
+  .circle9 span {
+    left: 37.5px;
+    top: 25%;
+  }
+
+  .text {
+    top: 120px;
+    left: 50px;
+    font-size: 26px;
+  }
+
+  .text .title {
+    font-size: 48px;
+  }
+
+  .stack {
+    top: -100px;
+    right: -200px;
+    font-size: 18px;
+  }
+
+  .stack img {
+    width: 35px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .stack {
+    top: -100px;
+    right: -150px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .stack {
+    top: -100px;
+    right: -100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .text {
+    top: 100px;
+    left: 50px;
+    font-size: 18px;
+  }
+
+  .text .title {
+    font-size: 36px;
+  }
+  
+  .stack {
+    top: -75px;
+    right: -50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stack {
+    top: -50px;
+    right: -30px;
+    font-size: 14px;
+  }
+  .stack img {
+    width: 25px;
+    transform: rotate(0deg) scaleX(1);
+  }
+}
+
+@media (max-width: 440px) {
+  .stack {
+    top: -50px;
+    left: 5px;
+    font-size: 14px;
+  }
+  .stack img {
+    width: 25px;
+    rotate: none;
+  }
+
+  .ellipse-container {
+    width: 202px;
+    height: 202px;
+  }
+
+  .ellipse.thick {
+    border-width: 3.33px;
+    top: 4px;
+    left: 4px;
+  }
+
+  .ellipse.yellow {
+    border-width: 3.33px;
+    top: 4px;
+    left: 4px;
+  }
+
+  .circles {
+    width: 190.83px;
+    height: 190.83px;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4,
+  .circle5,
+  .circle6,
+  .circle7,
+  .circle8,
+  .circle9 {
+    width: 21.33px;
+    height: 21.33px;
+  }
+
+  .circle1::before,
+  .circle2::before,
+  .circle3::before,
+  .circle4::before,
+  .circle5::before,
+  .circle6::before,
+  .circle7::before,
+  .circle8::before,
+  .circle9::before {
+    width: 4px;
+    height: 4px;
+  }
+
+  .circle1::after,
+  .circle2::after,
+  .circle3::after,
+  .circle4::after,
+  .circle5::after,
+  .circle6::after,
+  .circle7::after,
+  .circle8::after,
+  .circle9::after {
+    width: 12.33px;
+    height: 12.33px;
+  }
+
+  .circle1 span,
+  .circle2 span,
+  .circle3 span,
+  .circle4 span,
+  .circle5 span,
+  .circle6 span,
+  .circle7 span,
+  .circle8 span,
+  .circle9 span {
+    top: 8.33px;
+    width: 33.33px;
+    font-size: 13px;
+  }
+
+  .circle1 span {
+    left: 25px;
+    top: 16.66%;
+  }
+
+  .circle2 span {
+    left: -55px;
+    top: 16.66%;
+  }
+
+  .circle3 span {
+    left: 25px;
+    top: 16.66%;
+  }
+
+  .circle4 span {
+    left: 25px;
+    top: -30%;
+  }
+
+  .circle5 span {
+    left: -32px;
+    top: 16.66%;
+  }
+
+  .circle6 span {
+    left: 25px;
+    top: 16.66%;
+  }
+
+  .circle7 span {
+    left: 25px;
+    top: 16.66%;
+  }
+
+  .circle8 span {
+    left: -32px;
+    top: 16.66%;
+  }
+
+  .circle9 span {
+    left: 25px;
+    top: 16.66%;
+  }
+}
